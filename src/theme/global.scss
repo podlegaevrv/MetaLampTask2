@@ -1,0 +1,40 @@
+@import "fonts";
+@import "variables";
+
+html{
+  line-height: normal;
+}
+body{
+  font-size: 14px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  color: $darkShade-color-75;
+}
+h1{
+  font-size: 24px;
+  font-weight: 700;
+  color: $base-darkShade-color;
+  margin: 0;
+  margin-bottom: 52px;
+}
+h2{
+  font-size: 19px;
+  font-weight: 700;
+  color: $base-darkShade-color;
+  margin: 0;
+  margin-bottom: 52px;
+  line-height: 24px;
+}
+h3{
+  font-size: 12px;
+  font-weight: 700;
+  color: $base-darkShade-color;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 12px;
+  margin-bottom: 35px
+}
+p{
+  line-height: 24px;
+}
+

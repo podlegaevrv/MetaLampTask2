@@ -1,0 +1,16 @@
+@import "../../theme/variables";
+
+.text-block{
+  display: flex;
+  &__tag{
+    color: $darkShade-color-25;
+    margin-right: 30px;
+    font-weight: 400;
+    width: 37px;
+    text-align: right;
+  }
+  &__text{
+    max-width: 369px;
+  }
+}
+

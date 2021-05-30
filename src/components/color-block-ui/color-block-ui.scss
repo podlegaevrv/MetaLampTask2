@@ -1,0 +1,49 @@
+@import "../../theme/variables";
+
+.color-block{
+  width: 281px;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  &__box{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+    &--ds-base{
+      background: $base-darkShade-color;
+    }
+    &--ds-75{
+      background: $darkShade-color-75;
+    }
+    &--ds-50{
+      background: $darkShade-color-50;
+    }
+    &--ds-25{
+      background: $darkShade-color-25;
+    }
+    &--ds-5{
+      background: $darkShade-color-5;
+    }
+    &--purple{
+      background: $purple-color;
+    }
+    &--green{
+      background: $green-color;
+    }
+  }
+  &__text-block{
+    color: $base-darkShade-color;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 146.3%;
+  }
+  &__title{
+    font-weight: 700;
+  }
+  &__text{
+    text-transform: uppercase;
+  }
+}
+
+
