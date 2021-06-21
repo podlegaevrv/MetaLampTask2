@@ -1,0 +1,5 @@
+mixin form-control(label, uimargin)
+    .form-control(class!=attributes.class)
+        if(label!='')
+            label.text-h3.form-control__label(class!=uimargin)=label
+        block

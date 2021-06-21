@@ -1,0 +1,14 @@
+include ../text-field/text-field
+include ../form-control/form-control
+
+mixin date-dropdown()
+    +text-field()(class='date-dropdown' id='filter-dropdown')
+
+mixin date-dropdown-inline()
+    div.test-inline
+
+mixin two-date-dropdown()
+    +form-control('date dropdown')(class='form-control--two-date')
+        +text-field()(class='date-dropdown date-dropdown--short' id='start')
+    +form-control('date dropdown')(class='form-control--two-date')
+        +text-field()(class='date-dropdown date-dropdown--short' id='end')

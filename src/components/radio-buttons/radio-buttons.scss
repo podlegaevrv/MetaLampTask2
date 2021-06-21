@@ -1,0 +1,47 @@
+@import "../../theme/variables";
+
+.custom-radio{
+  position: relative;
+  padding-left: 30px;
+  margin-right: 20px;
+
+  &__text{
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Montserrat';
+    color: $darkShade-color-50;
+  }
+  &__input{
+    display: none;
+    &:checked{
+      & ~ .custom-radio__text{
+        color: $darkShade-color-75;
+      }
+      & ~ .custom-radio__indicator{
+        border-color: $purple-color;
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+          border-radius: 10px;
+          top: 3px;
+          left: 3px;
+        }
+      }
+    }
+  }
+  &__indicator{
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 1px solid $darkShade-color-25;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+  }
+}

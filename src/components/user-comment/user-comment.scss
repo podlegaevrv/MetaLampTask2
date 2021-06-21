@@ -1,0 +1,37 @@
+@import "../../theme/variables";
+
+.user-comment-block{
+  &__img{
+    border-radius: 100%;
+    border: 2px solid white;
+    -webkit-box-shadow: 0px 10px 20px 0px $darkShade-color-10;
+    -moz-box-shadow:    0px 10px 20px 0px $darkShade-color-10;
+    box-shadow:         0px 10px 20px 0px $darkShade-color-10;
+    margin-right: 10px;
+  }
+  &__header{
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__footer{
+    display: flex;
+  }
+  &__user-name,
+  &__time-ago{
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Montserrat';
+    display: block;
+    color: $darkShade-color-75;
+  }
+  &__user-name{
+    font-weight: 700;
+  }
+  &__text{
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Montserrat';
+    color: $darkShade-color-75;
+    margin: 0;
+  }
+}

@@ -1,0 +1,13 @@
+include ../like-button/like-button
+
+mixin user-comment()
+    .user-comment-block
+        .user-comment-block__header
+            img.user-comment-block__img(src=require('../../components/user-comment/img/user.png').default)
+            div
+                span.user-comment-block__user-name Мурад Сарафанов
+                span.user-comment-block__time-ago 5 дней назад
+        .user-comment-block__footer
+            div
+                +like-button('12')(class='liked')
+            p.user-comment-block__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.

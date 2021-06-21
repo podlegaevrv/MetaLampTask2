@@ -1,0 +1,24 @@
+@import "../../theme/variables";
+
+.icon-text-block{
+  display: flex;
+  width: 280px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid $darkShade-color-10;
+  margin-bottom: 20px;
+  &__img{
+    margin-right: 10px;
+  }
+  &__title,
+  &__text{
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Montserrat';
+    display: block;
+    color: $darkShade-color-75;
+  }
+  &__title{
+    font-weight: 700;
+  }
+
+}

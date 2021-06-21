@@ -1,0 +1,28 @@
+mixin rate-button(name,idcheck)
+    .simple-rating
+        .simple-rating__items
+            if(idcheck=='5')
+                input(id=name+'__5' type='radio' class='simple-rating__item' name=name  value='5' checked)
+            else
+                input(id=name+'__5' type='radio' class='simple-rating__item' name=name  value='5')
+            label(for=name+'__5' class="simple-rating__label")
+            if(idcheck=='4')
+                input(id=name+'__4' type='radio' class='simple-rating__item' name=name  value='4' checked)
+            else
+                input(id=name+'__4' type='radio' class='simple-rating__item' name=name  value='4' )
+            label(for=name+'__4' class="simple-rating__label")
+            if(idcheck=='3')
+                input(id=name+'__3' type='radio' class='simple-rating__item' name=name  value='3' checked)
+            else
+                input(id=name+'__3' type='radio' class='simple-rating__item' name=name  value='3' )
+            label(for=name+'__3' class="simple-rating__label")
+            if(idcheck=='2')
+                input(id=name+'__2' type='radio' class='simple-rating__item' name=name  value='2' checked)
+            else
+                input(id=name+'__2' type='radio' class='simple-rating__item' name=name  value='2' )
+            label(for=name+'__2' class="simple-rating__label")
+            if(idcheck=='1')
+                input(id=name+'__1' type='radio' class='simple-rating__item' name=name  value='1' checked)
+            else
+                input(id=name+'__1' type='radio' class='simple-rating__item' name=name  value='1' )
+            label(for=name+'__1' class="simple-rating__label")

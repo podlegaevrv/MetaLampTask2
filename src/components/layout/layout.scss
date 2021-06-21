@@ -4,3 +4,33 @@
   grid-template-columns: 1fr 444px;
   margin: 0 auto;
 }
+.layout-form-elements{
+  max-width: 1159px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  &--ui-margin{
+    margin-bottom: 134px;
+  }
+  &__left-col{
+    width: 320px;
+  }
+  &__center-col{
+    width: 260px;
+    margin-left: 126px;
+    margin-right: 132px;
+  }
+  &__center-col-type2{
+    width: 320px;
+    margin-left: 126px;
+    margin-right: 72px;
+  }
+  &__right-col{
+    width: 320px;
+  }
+  &__rigt-col-type2{
+    width: 705px;
+    margin-left: 126px;
+  }
+}

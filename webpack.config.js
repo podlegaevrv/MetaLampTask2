@@ -40,7 +40,19 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './pages/colorandtype/colorandtype.pug',
-      inject: 'body'
+      inject: 'body',
+      filename: 'colorandtype.html',
+      publicPath: ''
+    }),
+    new HtmlWebpackPlugin({
+      template: './pages/formelements/formelements.pug',
+      inject: 'body',
+      filename: 'formelements.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './pages/index/index.pug',
+      inject: 'body',
+      filename: "index.html"
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

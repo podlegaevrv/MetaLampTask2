@@ -1,0 +1,110 @@
+extends ../base/base
+
+include ../../components/layout/layout
+include ../../components/form-control/form-control
+include ../../components/text-field/text-field
+include ../../components/dropdown/dropdown
+include ../../components/checkbox-buttons/checkbox-buttons
+include ../../components/radio-buttons/radio-buttons
+include ../../components/toggle/toggle
+include ../../components/masked-text-field/masked-text-field
+include ../../components/like-button/like-button
+include ../../components/rate-button/rate-button
+include ../../components/range-slider/range-slider
+include ../../components/buttons/buttons
+include ../../components/date-dropdown/date-dropdown
+include ../../components/expandable-checkbox-list/expandable-checkbox-list
+include ../../components/bullet-list/bullet-list
+include ../../components/icon-text-list/icon-text-list
+include ../../components/user-comment/user-comment
+
+block variables
+
+block title
+    | Form Elements
+
+block main
+    include ../../components/uikitHeader/uikitHeader
+    +layout-form-elements()
+        section.layout-form-elements__left-col
+            +form-control('text-field')
+                span.form-control__ui-status Default
+                +text-field('Email')
+            +form-control('text-field')
+                span.form-control__ui-status Hover / Focus
+                +text-field('This is pretty awesome','This is pretty awesome')
+            +form-control('dropdown')
+                +dropdown-guests()
+            +form-control('masked text field')
+                +masked-text-field()
+            +form-control('')(class='form-control--two-col')
+                +two-date-dropdown()
+            +form-control('filter date dropdown')(class='form-control--short')
+                +date-dropdown()
+            +form-control('subscription text field')(class='form-control--short')
+                +text-field-subscribe('Email')
+        section.layout-form-elements__center-col
+            +form-control('Checkbox buttons','form-control__label--ui-margin')
+                    +checkbox-button('name1', 'Можно курить')
+                    +checkbox-button('name2', 'Можно с питомцами', true)
+                    +checkbox-button('name3', 'Можно пригласить гостей (до 10 человек)', true)
+            +form-control('Radio Buttons', 'form-control__label--ui-margin')
+                +radiobox('name4', 'Мужчина', true)
+                +radiobox('name4', 'Женщина')
+            +form-control('Toggle', 'form-control__label--ui-margin')
+                +toggle('Получать спецпредложения', true)
+                +toggle('Получать спецпредложения')
+            +form-control('Like button', 'form-control__label--ui-margin')
+                +like-button('2')
+                +like-button('12')(class='liked')
+            +form-control('Rate button', 'form-control__label--ui-margin')
+                +rate-button('simple-rate', '4')
+                +rate-button('simple-rate2', '5')
+        section.layout-form-elements__right-col
+            +form-control('Range slider')(class='form-control--short')
+                +range-slider()
+            +form-control('Buttons', 'form-control__label--ui-margin')
+                +btnType1('click me')
+                +btnType1('click me')(class='btn-type1--hover')
+                br
+                +btnType2('click me')
+                +btnType2('click me')(class='btn-type2--hover')
+                br
+                +btnType3('click me')
+                +btnType3('click me')(class='btn-type3--hover')
+                br
+                +btnLarge('Перейти к оплате')
+            +form-control('Pagination', 'form-control__label--ui-margin')
+                include ../../components/pagination/pagination
+    +layout-form-elements()(class='layout-form-elements--ui-margin')
+        section.layout-form-elements__left-col
+            +form-control('dropdown')(class='form-control--short')
+                span.form-control__ui-status Default
+                +dropdown()
+            +form-control('dropdown')(class='form-control--short')
+                span.form-control__ui-status expanded
+                +dropdown()(class='menu-open')
+        section.layout-form-elements__center-col-type2
+            +form-control('dropdown')
+                +dropdown-guests()(class='menu-open')
+        section.layout-form-elements__right-col
+            +form-control('dropdown')
+                +dropdown-guests-ui()(class='menu-open')
+    +layout-form-elements()
+        section.layout-form-elements__left-col
+            +expandable-checkbox-list()
+            +expandable-checkbox-list('expandable-checkbox-list-box__btn--open','show')
+        section.layout-form-elements__center-col
+            +form-control('rich Checkbox Buttons', 'form-control__label--ui-margin')
+                +checkbox-button('','Ширина коридоров в номере не менее 91 см.',false, 'Широкий коридор')
+                +checkbox-button('','На 1 этаже вас встретит специалист  и проводит до номера.',false, 'Помощник для инвалидов')
+        section.layout-form-elements__right-col
+            +form-control('bullet list', 'form-control__label--ui-margin')
+                +bullet-list()
+    +layout-form-elements()
+        section.layout-form-elements__left-col
+            +text-icon-comfort()
+            +text-icon-tower()
+        section.layout-form-elements__rigt-col-type2
+            +user-comment()
+

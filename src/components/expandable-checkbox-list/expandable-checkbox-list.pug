@@ -1,0 +1,12 @@
+include ../checkbox-buttons/checkbox-buttons
+
+mixin expandable-checkbox-list(showbtn,showList)
+    .expandable-checkbox-list-box
+        button.expandable-checkbox-list-box__btn.text-h3(class!=showbtn, type="button" ) expandable checkbox list
+        .expandable-checkbox-list(class!=showList)
+            +checkbox-button('','Завтрак')
+            +checkbox-button('','Письменный стол', true)
+            +checkbox-button('','Стул для кормления', true)
+            +checkbox-button('','Кроватка', true)
+            +checkbox-button('','Телевизор')
+            +checkbox-button('','Шампунь')

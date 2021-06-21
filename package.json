@@ -37,7 +37,12 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
+    "item-quantity-dropdown": "^2.1.0",
     "jquery": "^3.6.0",
-    "normalize.css": "^8.0.1"
+    "jquery-mask-plugin": "^1.14.16",
+    "normalize.css": "^8.0.1",
+    "nouislider": "^15.1.1",
+    "wnumb": "^1.2.0"
   }
 }

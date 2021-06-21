@@ -1,0 +1,118 @@
+@import "../../theme/variables";
+
+.iqdropdown {
+  border: 1px solid $darkShade-color-25;
+  height: 44px;
+  .iqdropdown-menu {
+    webkit-box-shadow: 0px 10px 20px 0px $darkShade-color-5;
+    -moz-box-shadow:    0px 10px 20px 0px $darkShade-color-5;
+    box-shadow:         0px 10px 20px 0px $darkShade-color-5;
+    border: 1px solid $darkShade-color-50;
+    border-radius: 0 0 4px 4px;
+    padding-top: 7px;
+    top: 44px;
+    &-option {
+      height: 30px;
+      margin-bottom: 7px;
+      padding-right: 7px;
+    }
+
+    &-close {
+
+    }
+  }
+  .iqdropdown-selection {
+    color: $darkShade-color-75;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    &::after {
+      background-image: url("./img/dropdown-arrow-open.svg");
+      background-size: auto;
+      height: 8px;
+    }
+  }
+  &.menu-open {
+    border-color: $darkShade-color-50;
+    border-radius: 4px 4px 0 0;
+    .iqdropdown-selection::after {
+      background-image: url("./img/dropdown-arrow-close.svg");
+      //transform: rotate(180deg);
+    }
+
+  }
+  &-content {
+
+  }
+
+  &-item {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $base-darkShade-color;
+  }
+
+  p.iqdropdown-description {
+
+  }
+}
+.iqdropdown .iqdropdown-item-controls {
+  height: 30px;
+  .counter {
+    border: none;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 700;
+    padding: 9px 12px;
+    color: $base-darkShade-color;
+    width: 33px;
+  }
+
+  button {
+    padding: 0;
+    height: 30px;
+    border: none;
+    &:hover {
+
+    }
+
+    &.button-decrement {
+
+      border-radius: 100%;
+    }
+
+    &.button-increment {
+      border-radius: 100%;
+    }
+  }
+}
+.iqdropdown .icon-decrement {
+  width: 30px;
+  height: 30px;
+
+  &::after {
+    background: url("./img/decrement.svg");
+    width: 30px;
+    height: 30px;
+    top: 0;
+  }
+
+  &.icon-increment::before {
+    background: none;
+  }
+  &.icon-increment::after{
+    background: url("./img/increment.svg");
+    height: 31px;
+  }
+}
+
+.dropdown-buttons{
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 7px 13px 14px;
+  height: 40px;
+  .apply{
+    position: absolute;
+    right: 7px;
+  }
+}

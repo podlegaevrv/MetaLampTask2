@@ -1,0 +1,41 @@
+mixin dropdown-guests()
+    .iqdropdown.dropdown-guests(class!=attributes.class)
+        p.iqdropdown-selection
+        .iqdropdown-menu
+            div.iqdropdown-menu-option(data-id='item1')
+                div
+                    p.iqdropdown-item Взрослые
+            div.iqdropdown-menu-option(data-id='item2')
+                div
+                    p.iqdropdown-item Дети
+            div.iqdropdown-menu-option(data-id='item3')
+                div
+                    p.iqdropdown-item Младенцы
+
+mixin dropdown-guests-ui()
+    .iqdropdown.dropdown-guests(class!=attributes.class)
+        p.iqdropdown-selection
+        .iqdropdown-menu
+            div.iqdropdown-menu-option(data-id='item1' data-defaultcount="2")
+                div
+                    p.iqdropdown-item Взрослые
+            div.iqdropdown-menu-option(data-id='item2' data-defaultcount="1")
+                div
+                    p.iqdropdown-item Дети
+            div.iqdropdown-menu-option(data-id='item3')
+                div
+                    p.iqdropdown-item Младенцы
+
+mixin dropdown()
+    .iqdropdown.dropdown-default(class!=attributes.class)
+        p.iqdropdown-selection
+        .iqdropdown-menu
+            div.iqdropdown-menu-option(data-id='item1' data-defaultcount="2")
+                div
+                    p.iqdropdown-item Спальни
+            div.iqdropdown-menu-option(data-id='item2' data-defaultcount="2")
+                div
+                    p.iqdropdown-item Кровати
+            div.iqdropdown-menu-option(data-id='item3')
+                div
+                    p.iqdropdown-item Ванные комнаты

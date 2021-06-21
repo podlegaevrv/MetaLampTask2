@@ -1,0 +1,9 @@
+mixin checkbox-button(name,text,check,rich_title)
+    label(class="custom-checkbox")
+        input(type="checkbox" name= name class="custom-checkbox__input", checked=check)
+        span(class="custom-checkbox__indicator")
+        if(rich_title != '' && rich_title != undefined)
+          span(class="custom-checkbox__rich-title")=rich_title
+          span(class="custom-checkbox__sub-text")=text
+        else
+            span(class="custom-checkbox__text")=text

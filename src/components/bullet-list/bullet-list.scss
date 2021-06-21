@@ -1,0 +1,28 @@
+@import "../../theme/variables";
+
+.bullet-list{
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  width: 260px;
+  &__item{
+    padding-left: 20px;
+    line-height: 24px;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    position: relative;
+    margin-bottom: 10px;
+    &::before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background: $darkShade-color-25;
+      display: inline-block;
+      left: 0;
+      top: 7px;
+      border-radius: 100%;
+
+    }
+  }
+}

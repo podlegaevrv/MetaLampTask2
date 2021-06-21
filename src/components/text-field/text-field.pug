@@ -1,0 +1,6 @@
+mixin text-field(placeholder, value)
+    input.text-field(placeholder=placeholder, value=value ,type='text', class!=attributes.class, id!=attributes.id)
+
+mixin text-field-subscribe(placeholder, value)
+    input.text-field.text-field--sub(placeholder=placeholder, value=value ,type='text', class!=attributes.class, id!=attributes.id)
+    input.text-submit(type='submit' value='')

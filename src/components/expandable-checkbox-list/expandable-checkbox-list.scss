@@ -1,0 +1,39 @@
+.expandable-checkbox-list-box{
+  width: 266px;
+  margin-bottom: 35px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  &__btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    //margin-bottom: 17px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    &--open{
+      margin-bottom: 17px;
+      &::after{
+        transform: rotate(180deg);
+      }
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      right: 15px;
+      background: url("./img/expand_more.svg");
+      width: 12px;
+      height: 8px;
+    }
+  }
+}
+.expandable-checkbox-list{
+  display: none;
+}
+.show{
+  display: block;
+}
