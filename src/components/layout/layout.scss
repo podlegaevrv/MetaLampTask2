@@ -34,3 +34,13 @@
     margin-left: 126px;
   }
 }
+.layout-cards-ui-bg{
+  background: #F4F4F6;
+}
+.layout-cards-ui{
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 380px 380px 320px;
+  grid-gap: 40px;
+}

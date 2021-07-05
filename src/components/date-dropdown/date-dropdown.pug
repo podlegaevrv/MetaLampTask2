@@ -5,10 +5,10 @@ mixin date-dropdown()
     +text-field()(class='date-dropdown' id='filter-dropdown')
 
 mixin date-dropdown-inline()
-    div.test-inline
+    div.date-dropdown-inline
 
-mixin two-date-dropdown()
-    +form-control('date dropdown')(class='form-control--two-date')
-        +text-field()(class='date-dropdown date-dropdown--short' id='start')
-    +form-control('date dropdown')(class='form-control--two-date')
-        +text-field()(class='date-dropdown date-dropdown--short' id='end')
+mixin two-date-dropdown(from, to)
+    +form-control(from)(class='form-control--two-date')
+        +text-field()(class='date-dropdown date-dropdown--short data-dropdown--start')
+    +form-control(to)(class='form-control--two-date')
+        +text-field()(class='date-dropdown date-dropdown--short data-dropdown--end')

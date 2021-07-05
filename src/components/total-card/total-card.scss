@@ -1,0 +1,63 @@
+@import "../../theme/variables";
+
+.total-card{
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+  }
+  &__number-room{
+    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+    color: $base-darkShade-color;
+  }
+  &__price-day{
+    font-weight: 700;
+    &--day{
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+  &__type-room{
+    color: $purple-color;
+  }
+}
+.total-price-list{
+  &__item{
+    display: flex;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
+  &__title{
+    width: 214px;
+  }
+  &__alert{
+    width: 20px;
+    height: 20px;
+    background: url("img/alert.svg");
+    &--hide{
+      background: none;
+    }
+  }
+  &__price{
+    width: 84px;
+    text-align: right;
+  }
+  &__score{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    align-items: baseline;
+    span{
+      margin-bottom: 0;
+    }
+  }
+  &__score-border{
+    border-bottom: 1px dashed $darkShade-color-25;
+    flex-grow: 1;
+    margin-left: 4px;
+    margin-right: 5px;
+  }
+}

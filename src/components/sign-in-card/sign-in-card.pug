@@ -1,0 +1,16 @@
+include ../form-control/form-control
+include ../card-block/card-block
+include ../text-field/text-field
+include ../buttons/buttons
+
+mixin sign-in-card()
+    +card-block()
+        h1 Войти
+        form
+            +form-control
+                +text-field('Email')(class='sign-in-card__field-margin')
+                +text-field('Пароль')
+            +btnLarge('Войти')
+        .sign-in-card__footer
+            span Нет аккаунта на Toxin?
+            +btnType2('Создать')(class='btn-type2--no-margin-right')

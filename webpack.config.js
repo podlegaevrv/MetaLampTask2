@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -7,6 +8,15 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = process.env.NODE_ENV === 'production'
+
+const pages = [];
+
+fs.readdirSync(path.resolve(__dirname, 'src', 'pages')).filter((file) => {
+  return file.indexOf('base') !==0;
+}).forEach((file) => {
+  pages.push(file.split('/',2));
+});
+
 
 const optimization = () =>{
   const config = {}
@@ -29,7 +39,8 @@ module.exports = {
   },
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: '[path][name].[ext]'
   },
   optimization: optimization(),
   devServer: {
@@ -38,22 +49,11 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: './pages/colorandtype/colorandtype.pug',
-      inject: 'body',
-      filename: 'colorandtype.html',
-      publicPath: ''
-    }),
-    new HtmlWebpackPlugin({
-      template: './pages/formelements/formelements.pug',
-      inject: 'body',
-      filename: 'formelements.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './pages/index/index.pug',
-      inject: 'body',
-      filename: "index.html"
-    }),
+    ...pages.map(fileName => new HtmlWebpackPlugin({
+      filename: `${fileName}.html`,
+      template: `./pages/${fileName}/${fileName}.pug`,
+      inject: 'body'
+    })),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
@@ -96,10 +96,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]'
-        }
+        type: 'asset/resource'
       },
       {
         test: /\.(ttf|woff|woff2|eot)$/,

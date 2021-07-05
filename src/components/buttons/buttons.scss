@@ -64,6 +64,9 @@
   &:hover::before{
     opacity: 0.5;
   }
+  &--no-margin-right{
+    margin-right: 0;
+  }
 }
 .btn-type3{
   display: inline-block;
@@ -103,7 +106,6 @@
   text-transform: uppercase;
   border: none;
   outline: none;
-  margin-right: 19px;
   margin-bottom: 30px;
   &--hover{
     background: url("./img/arrow_forward.svg"), linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);

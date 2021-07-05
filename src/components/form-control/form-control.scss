@@ -21,6 +21,15 @@
     display: flex;
     justify-content: space-between;
   }
+  &--no-margin{
+    margin-bottom: 0;
+  }
+  &--margin-button{
+    margin-bottom: 30px;
+  }
+  &--reg-margin{
+    margin-bottom: 10px;
+  }
   &__label{
     display: block;
     margin-bottom: 5px;

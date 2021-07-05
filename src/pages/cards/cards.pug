@@ -1,0 +1,55 @@
+extends ../base/base
+
+include ../../components/layout/layout
+include ../../components/find-rooms/find-rooms
+include ../../components/account-registration/account-registration
+include ../../components/total-card/total-card
+include ../../components/sign-in-card/sign-in-card
+include ../../components/date-dropdown/date-dropdown
+include ../../components/room-item/room-item
+
+block variables
+
+block title
+    | Cards
+
+block main
+    body.layout-cards-ui-bg
+        include ../../components/uikitHeader/uikitHeader
+        section.layout-cards-ui
+            section
+               +find-rooms()
+               +account_registration()
+            section
+                +total-card()
+                +sign-in-card()
+            section
+                +date-dropdown-inline()
+                +room-item({
+                  id: '1',
+                  number: '888',
+                  type: 'Люкс',
+                  price: '9 990₽ ',
+                  rev: '145 ',
+                  rate: '5',
+                  slider: [
+                    '1.png',
+                    '1.png',
+                    '1.png',
+                    '1.png'
+                  ]
+                })
+                +room-item({
+                  id: '2',
+                  number: '840',
+                  type: '',
+                  price: '9 900₽ ',
+                  rev: '65 ',
+                  rate: '4',
+                  slider: [
+                    '2.png',
+                    '2.png',
+                    '2.png',
+                    '2.png'
+                  ]
+                })

@@ -1,0 +1,38 @@
+include ../form-control/form-control
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown
+include ../buttons/buttons
+
+mixin total-card()
+    section.card-block.total-card
+        .total-card__header
+            .total-card__number-room
+                span № 
+                    span.text-h1 888
+                    span.text-h3.total-card__type-room люкс
+            .total-card__price-day
+                span 9 990₽ 
+                    span.total-card__price-day--day в сутки
+        form
+            +form-control('')(class='form-control--two-col form-control--no-margin')
+                +two-date-dropdown('Прибытие', 'Выезд')
+            +form-control('Гости')
+                +dropdown-guests-ui()
+            .total-price-list
+                .total-price-list__item
+                    .total-price-list__title 9 990₽ х 4 суток
+                    .total-price-list__alert.total-price-list__alert--hide
+                    .total-price-list__price 39 960₽
+                .total-price-list__item
+                    .total-price-list__title Сбор за услуги: скидка 2 179₽
+                    .total-price-list__alert
+                    .total-price-list__price 0₽
+                .total-price-list__item
+                    .total-price-list__title Сбор за дополнительные услуги
+                    .total-price-list__alert
+                    .total-price-list__price 300₽
+                .total-price-list__score
+                    span.text-h2 Итого
+                    span.total-price-list__score-border
+                    span.text-h2 38 081₽
+            +btnLarge('забронировать')

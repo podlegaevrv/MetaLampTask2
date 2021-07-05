@@ -1,0 +1,10 @@
+.account-registration{
+  &__field-margin{
+    margin-bottom: 10px;
+  }
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}

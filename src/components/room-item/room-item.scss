@@ -1,0 +1,124 @@
+@import "../../theme/variables";
+
+.room-item{
+  width: 270px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow:    0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+  box-shadow:         0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+  background: white;
+  overflow: hidden;
+  margin-bottom: 40px;
+  &__slider{
+    width: 270px;
+    height: 151px;
+  }
+  &__slider-item{
+    img{
+      width: 100%;
+    }
+  }
+  &__body{
+    padding: 20px;
+  }
+  &__body-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $darkShade-color-10;
+  }
+  &__number-room{
+    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+    color: $base-darkShade-color;
+  }
+  &__price-day{
+    font-weight: 700;
+    &--day{
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+  &__type-room{
+    color: $purple-color;
+  }
+  &__body-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__count-rev{
+    font-weight: 700;
+    &--light{
+      font-weight: 400;
+    }
+  }
+}
+.slick-slider{
+  &:hover{
+    .slick-prev,
+    .slick-next{
+      opacity: 1;
+    }
+  }
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  width: 8px;
+  height: 13px;
+  opacity: 0;
+  &:before {
+    opacity: 1;
+    content: '';
+    width: 8px;
+    height: 13px;
+    background: url("img/expand_more.svg");
+    display: block;
+  }
+}
+.slick-prev {
+  left: 18px;
+  &:before{
+
+  }
+}
+.slick-next {
+  right: 18px;
+  &:before{
+    transform: rotate(180deg);
+  }
+}
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+.slick-dots {
+  bottom: 15px;
+  right: 15px;
+  width: auto;
+  li{
+    width: 7px;
+    height: 7px;
+    margin: 0 3px;
+    button{
+      &:before{
+        color: white;
+        opacity: 1;
+        display: block;
+        content: '';
+        border: 1px solid white;
+        border-radius: 100%;
+        width: 7px;
+        height: 7px;
+      }
+    }
+    &.slick-active button:before{
+      background: white;
+      opacity: 1;
+    }
+  }
+}

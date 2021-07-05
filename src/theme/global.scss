@@ -10,14 +10,14 @@ body{
   font-weight: 400;
   color: $darkShade-color-75;
 }
-h1{
+h1, .text-h1{
   font-size: 24px;
   font-weight: 700;
   color: $base-darkShade-color;
   margin: 0;
   margin-bottom: 52px;
 }
-h2{
+h2, .text-h2{
   font-size: 19px;
   font-weight: 700;
   color: $base-darkShade-color;
