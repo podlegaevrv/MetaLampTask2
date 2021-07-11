@@ -1,0 +1,44 @@
+include ../buttons/buttons
+
+mixin page-header(options)
+    if !options
+      - options = {}
+
+    header.page-header(class!=attributes.class)
+        .page-header__container
+            .page-header__logo
+                img(src=require('../../components/page-header/img/page-logo.svg'))
+            .page-header__btn-burger
+                span
+            nav.page-header__nav
+                ul.page-header__menu
+                    li.page-header__menu-item
+                        a.page-header__active(href='#') О нас
+                    li.page-header__menu-item.page-header__menu-item--submenu
+                        a(href='#') Услуги
+                        ul.page-header__submenu
+                            li
+                                a(href='#') Пункт подменю 1
+                            li
+                                a(href='#') Пункт подменю 2
+                            li
+                                a(href='#') Пункт подменю 3
+                    li.page-header__menu-item
+                        a(href='#') Вакансии
+                    li.page-header__menu-item
+                        a(href='#') Новости
+                    li.page-header__menu-item.page-header__menu-item--submenu
+                        a(href='#') Соглашения
+                        ul.page-header__submenu
+                            li
+                                a(href='#') Пункт подменю 1
+                            li
+                                a(href='#') Пункт подменю 2
+                            li
+                                a(href='#') Пункт подменю 3
+                if !options.login
+                    +btnType2('Войти')(class='btn-no-bottom-margin btn-header')
+                    +btnType1('Зарегистироваться')(class='btn-no-bottom-margin btn-header')
+                else
+                    .page-header__user-block
+                        = options.login

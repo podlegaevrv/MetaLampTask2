@@ -1,0 +1,150 @@
+@import "../../theme/variables";
+
+.page-header{
+  width: 100%;
+  background: white;
+  padding: 15px 0px;
+  box-shadow: 0 10px 20px $darkShade-color-5;
+  &--ui-kit{
+    margin-bottom: 40px;
+  }
+  &__container{
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-sizing: content-box;
+  }
+  &__logo{
+    img{
+      max-width: 100%;
+      display: block;
+    }
+  }
+  &__nav{
+    display: flex;
+    align-items: center;
+
+    @include media-tablet{
+      position: absolute;
+      flex-direction: column;
+      background: white;
+      width: 100%;
+      padding: 0 20px 20px;
+      align-items: start;
+      top: 55px;
+      left: 0;
+      z-index: 4;
+      display: none;
+      &--active{
+        display: flex;
+      }
+    }
+  }
+  &__menu{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    @include media-tablet{
+
+      display: block;
+    }
+    a{
+      text-decoration: none;
+      color: $darkShade-color-50;
+      &.active{
+        font-weight: 700;
+        color: $darkShade-color-75;
+      }
+    }
+  }
+  &__menu-item{
+    margin-right: 20px;
+    position: relative;
+    @include media-tablet{
+      margin: 20px 0;
+    }
+    &--submenu{
+      padding-right: 24px;
+      &::after{
+        content: '';
+        background: url("./img/expand_more.svg") 100% 50% no-repeat;
+        display: block;
+        width: 12px;
+        height: 8px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+      }
+
+    }
+    &:hover > .page-header__submenu{
+      display: block;
+    }
+  }
+  &__submenu{
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    background: white;
+    display: none;
+    z-index: 5;
+    li{
+      padding: 5px 0;
+    }
+  }
+  &__user-block{
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-left: 1px solid $darkShade-color-10;
+  }
+  &__btn-burger{
+    display: none;
+    @include media-tablet{
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      &:before,&:after{
+        content: '';
+        background: $darkShade-color-10;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+      }
+      span{
+        position: absolute;
+        background: $darkShade-color-10;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px
+      }
+      &:before{
+        top: 0;
+      }
+      &:after{
+        bottom: 0;
+      }
+    }
+    span{
+
+    }
+  }
+}
+.btn-header{
+  padding-top: 9px;
+  padding-bottom: 10px;
+  @include media-tablet{
+    margin-bottom: 10px;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+}

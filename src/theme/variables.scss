@@ -7,3 +7,21 @@ $darkShade-color-5: transparentize($base-darkShade-color, 0.95);
 $purple-color: #bc9cff;
 $green-color: #6fcf97;
 
+$xxs: 320px;
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;
+$xl: 1440px;
+
+@mixin media-tablet{
+  @media (max-width: $md) {
+    @content
+  }
+}
+
+@mixin media-mobile{
+  @media (max-width: $sm) {
+    @content
+  }
+}

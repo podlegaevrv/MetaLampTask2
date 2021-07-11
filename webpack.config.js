@@ -45,7 +45,9 @@ module.exports = {
   optimization: optimization(),
   devServer: {
     port: 4200,
-    open: isDev
+    open: isDev,
+    host: '0.0.0.0',
+    hot: true
   },
   plugins: [
     new CleanWebpackPlugin(),
