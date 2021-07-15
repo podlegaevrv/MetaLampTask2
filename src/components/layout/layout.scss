@@ -44,3 +44,8 @@
   grid-template-columns: 380px 380px 320px;
   grid-gap: 40px;
 }
+.layout-main-wrap{
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: min-content 1fr min-content;
+}

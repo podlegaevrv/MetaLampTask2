@@ -2,10 +2,13 @@
 
 .icon-text-block{
   display: flex;
-  width: 280px;
+  max-width: 280px;
   padding-bottom: 17px;
   border-bottom: 1px solid $darkShade-color-10;
   margin-bottom: 20px;
+  &--no-border{
+    border-bottom: none;
+  }
   &__img{
     margin-right: 10px;
   }

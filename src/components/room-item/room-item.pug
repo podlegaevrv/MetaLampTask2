@@ -3,7 +3,7 @@ include ../rate-button/rate-button
 mixin room-item(options)
     if !options
       -options = {}
-    article.room-item
+    article.room-item(class!=attributes.class)
         .room-item__slider
             each item in options.slider
                 .room-item__slider-itemnm

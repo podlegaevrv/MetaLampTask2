@@ -46,7 +46,7 @@ module.exports = {
   devServer: {
     port: 4200,
     open: isDev,
-    host: '0.0.0.0',
+    host: '192.168.0.37',
     hot: true
   },
   plugins: [

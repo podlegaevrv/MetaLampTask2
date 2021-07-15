@@ -92,7 +92,7 @@ block main
                 +dropdown-guests-ui()(class='menu-open')
     +layout-form-elements()
         section.layout-form-elements__left-col
-            +expandable-checkbox-list()
+            +expandable-checkbox-list('','','expandable checkbox list')
             +expandable-checkbox-list('expandable-checkbox-list-box__btn--open','show')
         section.layout-form-elements__center-col
             +form-control('rich Checkbox Buttons', 'form-control__label--ui-margin')
@@ -106,5 +106,11 @@ block main
             +text-icon-comfort()
             +text-icon-tower()
         section.layout-form-elements__rigt-col-type2
-            +user-comment()
+            +user-comment({
+              img: 'user.png',
+              name: 'Мурад Сарафанов',
+              time: '5 дней назад',
+              likeCount: '12',
+              like: 'liked',
+              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
 

@@ -1,0 +1,19 @@
+extends ../base/base
+
+
+include ../../components/find-rooms/find-rooms
+include ../../components/layout/layout
+
+block variables
+
+block title
+    | Landing page
+
+block main
+    +layout-main-wrap
+        main.main-bg
+            section.landing-container
+                section
+                    +find-rooms()
+                section.landing-container--text-block
+                    p.landing-container__text Лучшие номера для вашей работы, отдыха и просто вдохновения

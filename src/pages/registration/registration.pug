@@ -1,0 +1,14 @@
+extends ../base/base
+
+include ../../components/layout/layout
+include ../../components/account-registration/account-registration
+
+block variables
+
+block title
+    | Registration
+
+block main
+    +layout-main-wrap
+        main.reg-bg
+            +account_registration()

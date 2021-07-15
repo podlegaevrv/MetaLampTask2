@@ -1,0 +1,217 @@
+extends ../base/base
+
+include ../../components/layout/layout
+include ../../components/form-control/form-control
+include ../../components/date-dropdown/date-dropdown
+include ../../components/dropdown/dropdown
+include ../../components/range-slider/range-slider
+include ../../components/checkbox-buttons/checkbox-buttons
+include ../../components/expandable-checkbox-list/expandable-checkbox-list
+
+
+include ../../components/room-item/room-item
+
+block variables
+    -
+        rooms = [
+            {
+                id: '1',
+                number: '888',
+                type: ' Люкс',
+                price: '9 990₽ ',
+                rev: '145 ',
+                rate: '5',
+                slider: [
+                    '1.jpg',
+                    '1.jpg',
+                    '1.jpg',
+                    '1.jpg'
+                ]
+            },
+            {
+                id: '2',
+                number: '840',
+                type: '',
+                price: '9 900₽ ',
+                rev: '65 ',
+                rate: '4',
+                slider: [
+                    '2.jpg',
+                    '2.jpg',
+                    '2.jpg',
+                    '2.jpg'
+                ]
+            },
+            {
+                id: '3',
+                number: '980',
+                type: ' люкс',
+                price: '8500₽ ',
+                rev: '35 ',
+                rate: '3',
+                slider: [
+                    '3.jpg',
+                    '3.jpg',
+                    '3.jpg',
+                    '3.jpg'
+                ]
+            },
+            {
+                id: '4',
+                number: '856',
+                type: '',
+                price: '7300₽ ',
+                rev: '19 ',
+                rate: '5',
+                slider: [
+                    '4.jpg',
+                    '4.jpg',
+                    '4.jpg',
+                    '4.jpg'
+                ]
+            },
+            {
+                id: '5',
+                number: '740',
+                type: '',
+                price: '6000₽ ',
+                rev: '44 ',
+                rate: '4',
+                slider: [
+                    '5.jpg',
+                    '5.jpg',
+                    '5.jpg',
+                    '5.jpg'
+                ]
+            },
+            {
+                id: '6',
+                number: '982',
+                type: '',
+                price: '5800₽ ',
+                rev: '56 ',
+                rate: '3',
+                slider: [
+                    '6.jpg',
+                    '6.jpg',
+                    '6.jpg',
+                    '6.jpg'
+                ]
+            },
+            {
+                id: '7',
+                number: '678',
+                type: '',
+                price: '5500₽ ',
+                rev: '45 ',
+                rate: '5',
+                slider: [
+                    '7.jpg',
+                    '7.jpg',
+                    '7.jpg',
+                    '7.jpg'
+                ]
+            },
+            {
+                id: '8',
+                number: '450',
+                type: '',
+                price: '5300₽ ',
+                rev: '39 ',
+                rate: '4',
+                slider: [
+                    '8.jpg',
+                    '8.jpg',
+                    '8.jpg',
+                    '8.jpg'
+                ]
+            },
+            {
+                id: '9',
+                number: '350',
+                type: '',
+                price: '5000₽ ',
+                rev: '77 ',
+                rate: '3',
+                slider: [
+                    '9.jpg',
+                    '9.jpg',
+                    '9.jpg',
+                    '9.jpg'
+                ]
+            },
+            {
+                id: '10',
+                number: '666',
+                type: '',
+                price: '5000₽ ',
+                rev: '25 ',
+                rate: '5',
+                slider: [
+                    '10.jpg',
+                    '10.jpg',
+                    '10.jpg',
+                    '10.jpg'
+                ]
+            },
+            {
+                id: '11',
+                number: '444',
+                type: '',
+                price: '5000₽ ',
+                rev: '15 ',
+                rate: '3',
+                slider: [
+                    '11.jpg',
+                    '11.jpg',
+                    '11.jpg',
+                    '11.jpg'
+                ]
+            },
+            {
+                id: '12',
+                number: '352',
+                type: '',
+                price: '5000₽ ',
+                rev: '55 ',
+                rate: '3',
+                slider: [
+                    '12.jpg',
+                    '12.jpg',
+                    '12.jpg',
+                    '12.jpg'
+                ]
+            }
+        ]
+
+block title
+    | Search room
+
+block main
+    +layout-main-wrap
+        main.search-room--with-border
+            section.search-room
+                aside
+                    +form-control('даты пребывания в отеле')
+                        +date-dropdown()
+                    +form-control('гости')
+                        +dropdown-guests()
+                    +form-control('Диапазон цены')
+                        +range-slider()
+                    +form-control('Правила дома','form-control__label--ui-margin')
+                        +checkbox-button('name1', 'Можно курить')
+                        +checkbox-button('name2', 'Можно с питомцами', true)
+                        +checkbox-button('name3', 'Можно пригласить гостей (до 10 человек)', true)
+                    +form-control('Доступность', 'form-control__label--ui-margin')
+                        +checkbox-button('','Ширина коридоров в номере не менее 91 см.',false, 'Широкий коридор')
+                        +checkbox-button('','На 1 этаже вас встретит специалист  и проводит до номера.',false, 'Помощник для инвалидов')
+                    +form-control('Удобства номера')
+                        +dropdown()
+                    +expandable-checkbox-list('','','дополнительные удобства')
+                section
+                    h1 Номера, которые мы для вас подобрали
+                    .search-room__rooms
+                        each item in rooms
+                            +room-item(item)
+                    .search-room__pagination
+                        include ../../components/pagination/pagination

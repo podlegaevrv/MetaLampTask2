@@ -1,0 +1,14 @@
+extends ../base/base
+
+include ../../components/layout/layout
+include ../../components/sign-in-card/sign-in-card
+
+block variables
+
+block title
+    | Sign in
+
+block main
+    +layout-main-wrap
+        main.sign-in-bg
+            +sign-in-card()

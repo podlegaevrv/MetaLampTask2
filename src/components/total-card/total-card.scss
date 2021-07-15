@@ -31,12 +31,20 @@
     margin-bottom: 16px;
   }
   &__title{
-    width: 214px;
+    max-width: 214px;
+    width: 100%;
+    @include media-xs{
+      padding-right: 10px;
+    }
   }
   &__alert{
     width: 20px;
     height: 20px;
     background: url("img/alert.svg");
+    @include media-xs{
+      max-width: 20px;
+      width: 100%;
+    }
     &--hide{
       background: none;
     }

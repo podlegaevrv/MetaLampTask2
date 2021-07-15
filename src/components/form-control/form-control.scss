@@ -20,6 +20,9 @@
   &--two-col{
     display: flex;
     justify-content: space-between;
+    @include media-tablet(){
+      flex-wrap: wrap;
+    }
   }
   &--no-margin{
     margin-bottom: 0;

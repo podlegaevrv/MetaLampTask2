@@ -14,6 +14,18 @@ $md: 991px;
 $lg: 1199px;
 $xl: 1440px;
 
+@mixin media-xl{
+  @media (max-width: $xl) {
+    @content
+  }
+}
+
+@mixin media-lg{
+  @media (max-width: $lg) {
+    @content
+  }
+}
+
 @mixin media-tablet{
   @media (max-width: $md) {
     @content
@@ -22,6 +34,11 @@ $xl: 1440px;
 
 @mixin media-mobile{
   @media (max-width: $sm) {
+    @content
+  }
+}
+@mixin media-xs{
+  @media (max-width: $xs) {
     @content
   }
 }

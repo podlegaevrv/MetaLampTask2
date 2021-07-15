@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
+    "chart.js": "^3.4.1",
     "item-quantity-dropdown": "^2.1.0",
     "jquery": "^3.6.0",
     "jquery-mask-plugin": "^1.14.16",

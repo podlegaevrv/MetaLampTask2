@@ -5,6 +5,7 @@
   background: white;
   padding: 15px 0px;
   box-shadow: 0 10px 20px $darkShade-color-5;
+  z-index: 3;
   &--ui-kit{
     margin-bottom: 40px;
   }
@@ -39,6 +40,7 @@
       left: 0;
       z-index: 4;
       display: none;
+      box-sizing: border-box;
       &--active{
         display: flex;
       }
@@ -56,12 +58,13 @@
     a{
       text-decoration: none;
       color: $darkShade-color-50;
-      &.active{
+      &.page-header__active{
         font-weight: 700;
         color: $darkShade-color-75;
       }
     }
   }
+
   &__menu-item{
     margin-right: 20px;
     position: relative;
@@ -106,6 +109,7 @@
   }
   &__btn-burger{
     display: none;
+
     @include media-tablet{
       display: block;
       position: relative;
@@ -124,13 +128,29 @@
         left: 0;
         width: 100%;
         height: 2px;
-        top: 9px
+        top: 9px;
+        transition: all 0.3s ease 0s;
       }
       &:before{
         top: 0;
+        transition: all 0.3s ease 0s;
       }
       &:after{
         bottom: 0;
+        transition: all 0.3s ease 0s;
+      }
+      &--active{
+        &:before{
+          transform: rotate(45deg);
+          top: 9px;
+        }
+        span{
+          display: none;
+        }
+        &:after{
+          transform: rotate(-45deg);
+          bottom: 9px;
+        }
       }
     }
     span{

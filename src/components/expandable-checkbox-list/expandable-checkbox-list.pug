@@ -1,8 +1,8 @@
 include ../checkbox-buttons/checkbox-buttons
 
-mixin expandable-checkbox-list(showbtn,showList)
+mixin expandable-checkbox-list(showbtn,showList,name)
     .expandable-checkbox-list-box
-        button.expandable-checkbox-list-box__btn.text-h3(class!=showbtn, type="button" ) expandable checkbox list
+        button.expandable-checkbox-list-box__btn.text-h3(class!=showbtn, type="button" )=name
         .expandable-checkbox-list(class!=showList)
             +checkbox-button('','Завтрак')
             +checkbox-button('','Письменный стол', true)

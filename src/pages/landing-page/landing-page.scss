@@ -1,0 +1,40 @@
+@import "../../theme/variables";
+
+.main-bg{
+  background: url("./img/bg3.jpg") no-repeat;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 18px;
+  min-height: 829px;
+  box-sizing: content-box;
+  @include media-tablet{
+    min-height: auto;
+  }
+}
+.landing-container{
+  max-width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  @include media-tablet{
+    align-items: center;
+  }
+  &--text-block{
+    align-self: flex-end;
+    @include media-tablet{
+      align-self: auto;
+    }
+  }
+  &__text{
+    max-width: 297px;
+    text-align: right;
+    margin: 0;
+    @include media-tablet{
+      text-align: center;
+    }
+  }
+}
