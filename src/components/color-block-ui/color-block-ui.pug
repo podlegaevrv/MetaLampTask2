@@ -1,8 +1,6 @@
-mixin color-block(className, title, text)
-    .color-block
-        .color-block__box(class=className)
-        .color-block__text-block
-            .color-block__title
-                =title
-            .color-block__text
-                =text
+mixin color-block-ui(className, title, text)
+  .color-block
+    .color-block__box(class=className)
+      .color-block__text-block
+        .color-block__title=title
+          .color-block__text=text

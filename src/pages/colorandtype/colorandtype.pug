@@ -7,40 +7,40 @@ include ../../components/text-block-ui/text-block-ui
 block variables
 
 block title
-    | Color&Type
+  | Color&Type
 
 block main
-    include ../../components/uikitHeader/uikitHeader
-    +layout-color-and-type()
-        section
-            +color-block('color-block__box--ds-base','Dark Shade 100%','#1F2041')
-            +color-block('color-block__box--ds-75','Dark Shade 75%','#1F2041')
-            +color-block('color-block__box--ds-50','Dark Shade 50%','#1F2041')
-            +color-block('color-block__box--ds-25','Dark Shade 25%','#1F2041')
-            +color-block('color-block__box--ds-5','Dark Shade 5%','#1F2041')
-            +color-block('color-block__box--purple','Purple','#BC9CFF')
-            +color-block('color-block__box--green','Green','#6FCF97')
-        section
-            +text-block()
-                h1.text-block__tag
-                    | H1
-                h1.text-block__text
-                    | This one is the sub-section or
-                    | widget title
-            +text-block()
-                h2.text-block__tag
-                    | H2
-                h2.text-block__text
-                    | Next one is the item title inside
-                    | widgets
-            +text-block()
-                h3.text-block__tag
-                    | H3
-                h3.text-block__text
-                    | This is a label or CTA text
-            +text-block()
-                p.text-block__tag
-                    | Body
-                p.text-block__text
-                    | This is the body text which is used for most<br>
-                    | of the design, like paragraphs, lists, etc.
+  include ../../components/uikitHeader/uikitHeader
+  +layout-color-and-type()
+    section
+      +color-block-ui('color-block__box--ds-base','Dark Shade 100%','#1F2041')
+      +color-block-ui('color-block__box--ds-75','Dark Shade 75%','#1F2041')
+      +color-block-ui('color-block__box--ds-50','Dark Shade 50%','#1F2041')
+      +color-block-ui('color-block__box--ds-25','Dark Shade 25%','#1F2041')
+      +color-block-ui('color-block__box--ds-5','Dark Shade 5%','#1F2041')
+      +color-block-ui('color-block__box--purple','Purple','#BC9CFF')
+      +color-block-ui('color-block__box--green','Green','#6FCF97')
+    section
+      +text-block()
+        h1.text-block__tag
+          | H1
+        h1.text-block__text
+          | This one is the sub-section or
+          | widget title
+      +text-block()
+        h2.text-block__tag
+          | H2
+        h2.text-block__text
+          | Next one is the item title inside
+          | widgets
+      +text-block()
+        h3.text-block__tag
+          | H3
+        h3.text-block__text
+          | This is a label or CTA text
+      +text-block()
+        p.text-block__tag
+          | Body
+        p.text-block__text
+          | This is the body text which is used for most<br>
+          | of the design, like paragraphs, lists, etc.

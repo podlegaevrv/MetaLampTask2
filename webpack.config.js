@@ -34,6 +34,7 @@ const optimization = () =>{
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
+  cache: true,
   entry: {
     main: './index.js'
   },
