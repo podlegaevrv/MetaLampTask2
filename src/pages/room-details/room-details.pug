@@ -5,57 +5,70 @@ include ../../components/total-card/total-card
 include ../../components/icon-text-list/icon-text-list
 include ../../components/user-comment/user-comment
 include ../../components/bullet-list/bullet-list
+include ../../components/chart-js/chart-js
 
 block variables
 
 block title
-    | Room details
+  | Room details
 
 block main
-    +layout-main-wrap
-        main.room-details--with-border
-            section.room-photos
-                img(src=require('./img/1.jpg')).room-photos__big-photo
-                img(src=require('./img/2.jpg'))
-                img(src=require('./img/3.jpg'))
-            section.room-details
-                section.room-details__info-block
-                    .room-details__two-col
-                        div
-                            h2 Сведения о номере
-                            +text-icon-comfort()
-                            +text-icon-tower()
-                            +text-icon-cosiness()
-                        div.room-details__chart
-                            h2 Впечатления от номера
-                            div.room-details__chart-block
-
-                    .room-details__reviews
-                        .room-details__reviews-header
-                            h2 Отзывы посетителей номера
-                            span 2 отзыва
-                        +user-comment({
-                          img: 'user.png',
-                          name: 'Мурад Сарафанов',
-                          time: '5 дней назад',
-                          likeCount: '12',
-                          like: 'liked',
-                          text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
-                        })
-                        +user-comment({
-                          img: 'user2.jpg',
-                          name: 'Патрисия Стёклышкова',
-                          time: 'Неделю назад',
-                          likeCount: '2',
-                          like: '',
-                          text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
-                        })
-                    .room-details__two-col
-                        div
-                            h2 Правила
-                            +bullet-list()
-                        div
-                            h2 Отмена
-                            p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-                section.room-details__total-block-wrap
-                    +total-card()
+  +layout-main-wrap
+    main.room-details--with-border
+      section.room-photos
+        img(src=require('./img/1.jpg')).room-photos__big-photo
+        img(src=require('./img/2.jpg'))
+        img(src=require('./img/3.jpg'))
+      section.room-details
+        section.room-details__info-block
+          .room-details__info-wrap
+            div.room-details__intelligence
+              h2.room-details__title Сведения о номере
+              +text-icon-block({
+                img: 'insert_emoticon.svg',
+                title: 'Комфорт',
+                text: 'Шумопоглощающие стены'
+              })
+              +text-icon-block({
+                img: 'location_city.svg',
+                title: 'Удобство',
+                text: 'Окно в каждой из спален'
+              })
+              +text-icon-block({
+                img: 'whatshot.svg',
+                title: 'Уют',
+                text: 'Номер оснащён камином'
+              })(class='icon-text-block--no-border')
+            div.room-details__chart
+              h2.room-details__title Впечатления от номера
+              div.room-details__chart-block
+                +chart-js()
+          .room-details__reviews
+            .room-details__reviews-header
+              h2.room-details__title Отзывы посетителей номера
+              span.room-details__count-rev 2 отзыва
+            +user-comment({
+              img: 'user.png',
+              name: 'Мурад Сарафанов',
+              time: '5 дней назад',
+              likeCount: '12',
+              like: 'liked',
+              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+            })
+            +user-comment({
+              img: 'user2.jpg',
+              name: 'Патрисия Стёклышкова',
+              time: 'Неделю назад',
+              likeCount: '2',
+              like: '',
+              text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+            })
+          .room-details__rule-wrap
+            div.room-details__rule
+              h2.room-details__title.room-details__title--rule Правила
+              +bullet-list()
+            div.room-details__cancel
+              h2.room-details__title Отмена
+              p.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+        section.room-details__total-block-wrap
+          +total-card()

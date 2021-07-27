@@ -2,7 +2,7 @@
 
 .search-room{
   max-width: 1160px;
-  padding: 30px 20px 69px;
+  padding: 30px 20px 62px;
   margin: 0 auto;
   box-sizing: content-box;
   display: grid;
@@ -20,8 +20,11 @@
       margin: auto;
     }
   }
-  h1{
+  &__title{
     margin-bottom: 21px;
+    @include media-tablet{
+      text-align: center;
+    }
   }
   &__rooms{
     display: grid;
@@ -41,5 +44,16 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
+  }
+}
+.search-room-side-bar{
+  &__sub-text{
+    font-size: $fz-h3;
+    color: $darkShade-color-50;
+    margin-top: 9px;
+    margin-bottom: 0px;
+  }
+  &__checkbox-wrap{
+    max-width: 226px;
   }
 }

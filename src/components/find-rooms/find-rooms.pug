@@ -4,12 +4,14 @@ include ../dropdown/dropdown
 include ../buttons/buttons
 
 mixin find-rooms
-    +card-block().find-rooms
-        h1 Найдём номера под ваши пожелания
-        form
-            +form-control('')(class='form-control--two-col form-control--no-margin')
-                +two-date-dropdown('Прибытие', 'Выезд')
-            +form-control('Гости')(class='form-control--margin-button')
-                +dropdown-guests()
-            +form-control()(class='form-control--no-margin')
-                +btnLarge('Подобрать номер')
+  +card-block().find-rooms
+    h1 Найдём номера под ваши пожелания
+    form
+      +form-control('')
+        +date-dropdown-separate('Прибытие', 'Выезд')
+      +form-control('Гости')(class='form-control--form-margin')
+        +dropdown-guests()
+      +btnLarge({
+        text: 'Подобрать номер',
+        type: 'submit'
+      })

@@ -8,6 +8,5 @@ $(document).ready(() => {
   $('.room-item__slider').slick({
     dots: true,
     arrows: true,
-
   })
 });

@@ -2,13 +2,14 @@ include ../text-field/text-field
 include ../form-control/form-control
 
 mixin date-dropdown()
-    +text-field()(class='date-dropdown' id='filter-dropdown')
+  +text-field()(class='date-dropdown' id='filter-dropdown')
 
 mixin date-dropdown-inline()
-    div.date-dropdown-inline
+  div.date-dropdown-inline
 
-mixin two-date-dropdown(from, to)
-    +form-control(from)(class='form-control--two-date')
-        +text-field()(class='date-dropdown date-dropdown--short data-dropdown--start')
-    +form-control(to)(class='form-control--two-date')
-        +text-field()(class='date-dropdown date-dropdown--short data-dropdown--end')
+mixin date-dropdown-separate(from, to)
+  .date-dropdown-separate
+    +form-control(from)(class='form-control--date-block')
+      +text-field()(class='date-dropdown date-dropdown--short data-dropdown--start')
+    +form-control(to)(class='form-control--date-block')
+      +text-field()(class='date-dropdown date-dropdown--short data-dropdown--end')

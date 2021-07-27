@@ -21,7 +21,7 @@
     }
   }
   &__body{
-    padding: 20px;
+    padding: 20px 20px 23px;
   }
   &__body-header{
     display: flex;
@@ -37,11 +37,15 @@
     align-items: baseline;
     color: $base-darkShade-color;
   }
+  &__number{
+    font-size: $fz-h2;
+    line-height: 24px;
+  }
   &__price-day{
     font-weight: 700;
     &--day{
       font-weight: 400;
-      font-size: 12px;
+      font-size: $fz-h3;
     }
   }
   &__type-room{
@@ -99,8 +103,8 @@
   margin-bottom: 0px;
 }
 .slick-dots {
-  bottom: 15px;
-  right: 15px;
+  bottom: 8px;
+  right: 8px;
   width: auto;
   li{
     width: 7px;

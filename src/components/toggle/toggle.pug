@@ -1,5 +1,6 @@
 mixin toggle(text,check)
+  div.toggle-wrap
     label.custom-toggle(class!=attributes.class)
-        input(type='checkbox', checked=check)
-        span.custom-toggle__slider
+      input(type='checkbox', checked=check)
+      span.custom-toggle__slider
     span.custom-toggle__text=text

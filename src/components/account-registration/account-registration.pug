@@ -6,21 +6,21 @@ include ../toggle/toggle
 include ../buttons/buttons
 
 mixin account_registration()
-    section.card-block
-        h1 Регистрация аккаунта
-        form
-            +form-control()
-                +text-field('Имя')(class='account-registration__field-margin')
-                +text-field('Фамилия')(class='account-registration__field-margin')
-                +radiobox('name1', 'Мужчина', true)
-                +radiobox('name1', 'Женщина')
-            +form-control('Дата рождения')
-                +masked-text-field()
-            +form-control('данные для входа в сервис')(class='form-control--reg-margin')
-                +text-field('Email')(class='account-registration__field-margin')
-                +text-field('Пароль')(class='account-registration__field-margin')
-                +toggle('Получать спецпредложения')
-            +btnLarge('Перейти к оплате')
-        .account-registration__footer
-            span Уже есть аккаунт на Toxin
-            +btnType2('Войти')(class='btn-type2--no-margin-right')
+  section.card-block
+    h1 Регистрация аккаунта
+    form
+      +form-control()
+        +text-field({placeholder: 'Имя'})(class='text-field--form-margin')
+        +text-field({placeholder: 'Фамилия'})(class='text-field--form-margin')
+        +radiobox('name1', 'Мужчина', true)
+        +radiobox('name1', 'Женщина')
+      +form-control('Дата рождения')
+        +masked-text-field()
+      +form-control('данные для входа в сервис')
+        +text-field({placeholder: 'Email', type: 'email'})(class='text-field--form-margin')
+        +text-field({placeholder: 'Пароль', type: 'password'})(class='text-field--form-margin')
+        +toggle('Получать спецпредложения')
+      +btnLarge({text: 'Перейти к оплате', type: 'submit'})(class='button-large--form-margin')
+    .account-registration__footer
+      span Уже есть аккаунт на Toxin
+      +linkType2('Войти','sign-in.html')(class='button-type-2--reg')

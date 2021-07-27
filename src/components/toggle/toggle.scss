@@ -1,12 +1,17 @@
 @import "../../theme/variables";
 
+.toggle-wrap{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 .custom-toggle{
   position: relative;
   display: inline-block;
   width: 40px;
   height: 20px;
   margin-right: 10px;
-  margin-bottom: 10px;
+  font-size: $fz-base;
   input{
     opacity: 0;
     width: 0;
@@ -15,16 +20,14 @@
       background-color: white;
       border-color: $purple-color;
       &::before{
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        background: $purple-linear-gradient;
         -webkit-transform: translateX(18px);
         -ms-transform: translateX(18px);
         transform: translateX(18px);
       }
     }
     &:focus + .custom-toggle__slider{
-
     }
-
   }
   &__slider{
     position: absolute;
@@ -52,9 +55,8 @@
     }
   }
   &__text{
-    font-size: 14px;
+    font-size: $fz-base;
     line-height: 24px;
-    font-family: Montserrat;
     color: $darkShade-color-75;
   }
 }

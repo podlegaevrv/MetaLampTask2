@@ -1,16 +1,17 @@
 extends ../base/base
 
+include ../../components/uikitHeader/uikitHeader
 include ../../components/page-header/page-header
 include ../../components/page-footer/page-footer
 
 block variables
 
 block title
-    | Headers & Footers
+  | Headers & Footers
 
 block main
-    body.layout-cards-ui-bg
-        include ../../components/uikitHeader/uikitHeader
-        +page-header()(class='page-header--ui-kit')
-        +page-header({login: 'Юлий Цезарь'})(class='page-header--ui-kit')
-        +page-footer()
+  body.layout-cards-ui-bg
+    +uikitHeader()
+    +page-header()(class='page-header--ui-kit')
+    +page-header({login: 'Юлий Цезарь'})(class='page-header--ui-kit')
+    +page-footer()

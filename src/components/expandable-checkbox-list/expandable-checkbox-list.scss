@@ -1,6 +1,6 @@
 .expandable-checkbox-list-box{
   width: 266px;
-  margin-bottom: 35px;
+  margin-bottom: 46px;
   &:last-child{
     margin-bottom: 0;
   }
@@ -9,14 +9,13 @@
     background: none;
     outline: none;
     cursor: pointer;
-    padding: 0;
+    padding: 14px 0 15px;
     margin: 0;
-    //margin-bottom: 17px;
     position: relative;
     width: 100%;
     text-align: left;
     &--open{
-      margin-bottom: 17px;
+      padding-bottom: 17px;
       &::after{
         transform: rotate(180deg);
       }

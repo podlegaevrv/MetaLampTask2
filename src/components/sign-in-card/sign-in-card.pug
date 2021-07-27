@@ -4,13 +4,13 @@ include ../text-field/text-field
 include ../buttons/buttons
 
 mixin sign-in-card()
-    +card-block()
-        h1 Войти
-        form
-            +form-control
-                +text-field('Email')(class='sign-in-card__field-margin')
-                +text-field('Пароль')
-            +btnLarge('Войти')
-        .sign-in-card__footer
-            span Нет аккаунта на Toxin?
-            +btnType2('Создать')(class='btn-type2--no-margin-right')
+  +card-block()
+    h1 Войти
+    form
+      +form-control
+        +text-field({placeholder: 'Email', type: 'email'})(class='text-field--form-margin')
+        +text-field({placeholder: 'Пароль', type: 'password'})
+      +btnLarge({text: 'Войти'})(class='button-large--form-margin')
+    .sign-in-card__footer
+      span Нет аккаунта на Toxin?
+      +linkType2('Создать','registration.html')

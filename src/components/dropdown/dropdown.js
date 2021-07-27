@@ -8,7 +8,7 @@ $(document).ready(() => {
       setSelectionText: (itemCount, totalItems) => {
         if (totalItems == 0){
           $('.clear').hide();
-          return 'Сколько гостей?'
+          return 'Сколько гостей'
         }
         if (totalItems == 1){
           return totalItems + ' гость'
@@ -59,7 +59,6 @@ $(document).ready(() => {
         if (itemCount.item2 > 4){
           result += ', ' + itemCount.item2 + ' кроватей'
         }
-
       }
       if (totalItems > 0 && itemCount.item3 > 0){
         result += ', ' + itemCount.item3 + ' ванных комнат'
@@ -67,14 +66,11 @@ $(document).ready(() => {
       if (result[0] == ','){
         result = result.slice(1);
       }
-
       if(result.length > 20){
         result = result.slice(0, 20);
         result += ' ...';
       }
-
       return result
     }
   })
-
 });

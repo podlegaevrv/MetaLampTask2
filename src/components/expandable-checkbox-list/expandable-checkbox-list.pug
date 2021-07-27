@@ -1,12 +1,41 @@
 include ../checkbox-buttons/checkbox-buttons
 
 mixin expandable-checkbox-list(showbtn,showList,name)
-    .expandable-checkbox-list-box
-        button.expandable-checkbox-list-box__btn.text-h3(class!=showbtn, type="button" )=name
-        .expandable-checkbox-list(class!=showList)
-            +checkbox-button('','Завтрак')
-            +checkbox-button('','Письменный стол', true)
-            +checkbox-button('','Стул для кормления', true)
-            +checkbox-button('','Кроватка', true)
-            +checkbox-button('','Телевизор')
-            +checkbox-button('','Шампунь')
+  .expandable-checkbox-list-box
+    button.expandable-checkbox-list-box__btn.text-h3(class!=showbtn, type="button" )=name
+    .expandable-checkbox-list(class!=showList)
+      +checkbox-button({
+        name: 'exp-check1',
+        text: 'Завтрак'
+      })
+      +checkbox-button({
+        name: 'exp-check2',
+        text: 'Письменный стол',
+        check: true
+      })
+      +checkbox-button({
+        name: 'exp-check3',
+        text: 'Стул для кормления',
+        check: true
+      })
+      +checkbox-button({
+        name: 'exp-check4',
+        text: 'Кроватка',
+        check: true
+      })
+      +checkbox-button({
+        name: 'exp-check5',
+        text: 'Телевизор'
+      })
+      +checkbox-button({
+        name: 'exp-check6',
+        text: 'Шампунь'
+      })
+      +checkbox-button({
+        name: 'exp-check5',
+        text: 'Телевизор'
+      })
+      +checkbox-button({
+        name: 'exp-check6',
+        text: 'Шампунь'
+      })

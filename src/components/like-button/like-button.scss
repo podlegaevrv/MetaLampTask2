@@ -21,7 +21,6 @@
     height: 8px;
     transition: all ease 0.4s;
   }
-
   &__text {
     margin-left: 0.5rem;
     font-size: 10px;
@@ -29,57 +28,35 @@
     line-height: 10px;
     color: $darkShade-color-25;
   }
-
   span {
     transition: all ease 0.4s;
   }
-
   &:focus {
     background-color: transparent;
-
-
     span {
-      //color: ;
     }
   }
-
   &:hover {
-
     background-color: transparent;
-
-
     span {
-      //color: ;
     }
   }
 }
-
 .liked {
   border-color: $purple-color;
   .button-like__icon{
     background: url("./img/heart_on.svg");
     transition: all ease 0.4s;
   }
-
   span {
     color: $purple-color;
-
   }
-
   &:focus {
-    //background-color: ;
-
     span {
-      //color: ;
     }
   }
-
   &:hover {
-    //background-color: ;
-    //border-color: ;
-
     span {
-      //color: ;
     }
   }
 }

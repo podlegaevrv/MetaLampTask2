@@ -1,15 +1,15 @@
 include ../like-button/like-button
 
 mixin user-comment(options)
-    if(!options)
-      - options = {}
-    .user-comment-block
-        .user-comment-block__header
-            img.user-comment-block__img(src=require('../../components/user-comment/img/' + options.img))
-            div
-                span.user-comment-block__user-name= options.name
-                span.user-comment-block__time-ago= options.time
-        .user-comment-block__footer
-            div
-                +like-button(options.likeCount)(class=options.like)
-            p.user-comment-block__text= options.text
+  if(!options)
+    - options = {}
+  .user-comment-block
+    .user-comment-block__header
+      img.user-comment-block__img(src=require('../../components/user-comment/img/' + options.img))
+      div.user-comment-block__text-wrap
+        span.user-comment-block__user-name=options.name
+        span.user-comment-block__time-ago=options.time
+    .user-comment-block__footer
+      div.user-comment-block__like-wrap
+        +like-button(options.likeCount)(class=options.like)
+      p.user-comment-block__text=options.text

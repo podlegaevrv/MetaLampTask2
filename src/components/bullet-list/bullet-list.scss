@@ -8,8 +8,7 @@
   &__item{
     padding-left: 20px;
     line-height: 24px;
-    font-size: 14px;
-    font-family: 'Montserrat';
+    font-size: $fz-base;
     position: relative;
     margin-bottom: 10px;
     &::before{

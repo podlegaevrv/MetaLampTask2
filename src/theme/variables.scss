@@ -1,3 +1,5 @@
+/* Colors */
+
 $base-darkShade-color: rgb(31, 32, 65);
 $darkShade-color-75: transparentize($base-darkShade-color, 0.25);
 $darkShade-color-50: transparentize($base-darkShade-color, 0.5);
@@ -6,6 +8,17 @@ $darkShade-color-10: transparentize($base-darkShade-color, 0.9);
 $darkShade-color-5: transparentize($base-darkShade-color, 0.95);
 $purple-color: #bc9cff;
 $green-color: #6fcf97;
+$purple-linear-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$green-linear-gradient: linear-gradient(180deg, rgba(111,207,151,1) 0%, rgba(102,210,234,1) 100%);
+
+/* Font sizes */
+
+$fz-base: 14px;
+$fz-h1: 24px;
+$fz-h2: 19px;
+$fz-h3: 12px;
+
+/* Break points*/
 
 $xxs: 320px;
 $xs: 575px;
@@ -14,18 +27,39 @@ $md: 991px;
 $lg: 1199px;
 $xl: 1440px;
 
+/* Mixins */
+
 @mixin body-text{
-  font-size: 14px;
+  font-size: $fz-base;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: $darkShade-color-75;
 }
 
 @mixin h1-text{
-  font-size: 24px;
+  font-size: $fz-h1;
+  line-height: 29px;
   font-weight: 700;
   color: $base-darkShade-color;
+  margin: 0 0 20px;
 }
+@mixin h2-text{
+  font-size: $fz-h2;
+  font-weight: 700;
+  color: $base-darkShade-color;
+  line-height: 23px;
+  margin: 0;
+}
+@mixin h3-text{
+  font-size: $fz-h3;
+  font-weight: 700;
+  color: $base-darkShade-color;
+  text-transform: uppercase;
+  line-height: 15px;
+  margin: 0;
+}
+
+/* Media */
 
 @mixin media-xl{
   @media (max-width: $xl) {

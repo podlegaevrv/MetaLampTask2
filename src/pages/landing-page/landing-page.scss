@@ -1,12 +1,17 @@
 @import "../../theme/variables";
 
-.main-bg{
+.landing-bg{
   background: url("./img/bg3.jpg") no-repeat;
   background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
   padding-top: 70px;
   padding-bottom: 18px;
-  min-height: 829px;
-  box-sizing: content-box;
+  min-height: 830px;
+  max-height: 830px;
   @include media-tablet{
     min-height: auto;
   }
@@ -23,7 +28,7 @@
   @include media-tablet{
     align-items: center;
   }
-  &--text-block{
+  &__text-block{
     align-self: flex-end;
     @include media-tablet{
       align-self: auto;

@@ -1,11 +1,48 @@
-mixin btnType1(text)
-  button.btn-type1(class!=attributes.class)=text
+mixin btnType1(options)
+  -
+    defaultoptions = {
+      type: 'button',
+      text: 'change-me',
+      disabled: false
+    }
+    options = Object.assign({}, defaultoptions, options)
+  button.button-type-1(type=options.type disabled=options.disabled class!=attributes.class)=options.text
 
-mixin btnType2(text)
-  button.btn-type2(class!=attributes.class)=text
+mixin linkType1(text,href)
+  a(href=href class!=attributes.class).button-type-1=text
 
-mixin btnType3(text)
-  button.btn-type3(class!=attributes.class)=text
+mixin btnType2(options)
+  -
+    defaultoptions = {
+      type: 'button',
+      text: 'change-me',
+      disabled: false
+    }
+    options = Object.assign({}, defaultoptions, options)
+  button.button-type-2(type=options.type disabled=options.disabled class!=attributes.class)=options.text
 
-mixin btnLarge(text)
-  button.btn-large(class!=attributes.class)=text
+mixin linkType2(text,href)
+  a(href=href class!=attributes.class).button-type-2=text
+
+mixin btnType3(options)
+  -
+    defaultoptions = {
+      type: 'button',
+      text: 'change-me',
+      disabled: false
+    }
+    options = Object.assign({}, defaultoptions, options)
+  button.button-type-3(type=options.type disabled=options.disabled class!=attributes.class)=options.text
+
+mixin linkType3(text,href)
+  a(href=href class!=attributes.class).button-type-3=text
+
+mixin btnLarge(options)
+  -
+    defaultoptions = {
+      type: 'button',
+      text: 'change-me',
+      disabled: false
+    }
+  button.button-large(type=options.type disabled=options.disabled class!=attributes.class)=options.text
+

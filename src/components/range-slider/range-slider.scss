@@ -6,29 +6,29 @@
   border-color: $darkShade-color-25;
   background: white;
   height: 6px;
-  margin-top: 20px;
+  margin-top: 23px;
   &__value{
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 12px;
+    font-size: $fz-h3;
     color: $darkShade-color-50;
   }
   .noUi-handle{
-    width: 14px;
-    height: 14px;
-    right: -10px;
+    width: 16px;
+    height: 16px;
+    right: -8px;
     top: -5px;
   }
 }
 .noUi-connect{
   background: rgb(111,207,151);
-  background: linear-gradient(180deg, rgba(111,207,151,1) 0%, rgba(102,210,234,1) 100%);
+  background: $green-linear-gradient;
 }
 .noUi-handle{
   box-shadow: none;
   background: rgb(111,207,151);
-  background: linear-gradient(180deg, rgba(111,207,151,1) 0%, rgba(102,210,234,1) 100%);
+  background: $green-linear-gradient;
   border-radius: 100%;
   border: 2px solid white;
   &:after,&:before{

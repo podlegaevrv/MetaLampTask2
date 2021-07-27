@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   &__page-item{
-    font-size: 12px;
+    font-size: $fz-h3;
     color: $darkShade-color-50;
     width: 40px;
     height: 40px;
@@ -17,28 +17,37 @@
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+    position: relative;
     &--active{
       background: rgb(188,156,255);
-      background: linear-gradient(180deg, rgba(188,156,255,1) 0%, rgba(139,164,249,1) 100%);
+      background: $purple-linear-gradient;
       color: white;
     }
     &--next,&--prev{
       background: rgb(111,207,151);
-      background: linear-gradient(180deg, rgba(111,207,151,1) 0%, rgba(102,210,234,1) 100%);
+      background: $green-linear-gradient;
     }
     &--prev img{
       transform: rotate(180deg);
     }
   }
   &__page-link{
-    font-size: 12px;
+    font-size: $fz-h3;
     color: inherit;
     text-decoration: none;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
   }
 }
 .pagination-text{
-  font-size: 14px;
   line-height: 24px;
   color: $darkShade-color-75;
   text-align: center;
+  margin: 9px 0;
 }

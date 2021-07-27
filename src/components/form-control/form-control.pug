@@ -1,5 +1,11 @@
 mixin form-control(label, uimargin)
-    .form-control(class!=attributes.class)
-        if(label!='')
-            label.text-h3.form-control__label(class!=uimargin)=label
-        block
+  .form-control(class!=attributes.class)
+    if(label != '')
+      h3.form-control__label(class!=uimargin)=label
+    block
+
+mixin form-group-control(label)
+  .form-control.form-control--large-margin-bottom(class!=attributes.class)
+    if(label != '')
+      h3.form-control__label.form-control__label--label-group=label
+    block

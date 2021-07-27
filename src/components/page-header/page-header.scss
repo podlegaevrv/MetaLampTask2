@@ -28,7 +28,6 @@
   &__nav{
     display: flex;
     align-items: center;
-
     @include media-tablet{
       position: absolute;
       flex-direction: column;
@@ -49,10 +48,9 @@
   &__menu{
     list-style: none;
     display: flex;
-    margin: 0;
+    margin: 0 6px 0 0;
     padding: 0;
     @include media-tablet{
-
       display: block;
     }
     a{

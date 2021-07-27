@@ -1,8 +1,10 @@
 extends ../base/base
 
+include ../../components/uikitHeader/uikitHeader
 include ../../components/layout/layout
 include ../../components/color-block-ui/color-block-ui
 include ../../components/text-block-ui/text-block-ui
+
 
 block variables
 
@@ -10,17 +12,17 @@ block title
   | Color&Type
 
 block main
-  include ../../components/uikitHeader/uikitHeader
+  +uikitHeader()
   +layout-color-and-type()
-    section
-      +color-block-ui('color-block__box--ds-base','Dark Shade 100%','#1F2041')
-      +color-block-ui('color-block__box--ds-75','Dark Shade 75%','#1F2041')
-      +color-block-ui('color-block__box--ds-50','Dark Shade 50%','#1F2041')
-      +color-block-ui('color-block__box--ds-25','Dark Shade 25%','#1F2041')
-      +color-block-ui('color-block__box--ds-5','Dark Shade 5%','#1F2041')
+    section.layout-color-and-type__color
+      +color-block-ui('color-block__box--ds--base','Dark Shade 100%','#1F2041')
+      +color-block-ui('color-block__box--ds--75','Dark Shade 75%','#1F2041')
+      +color-block-ui('color-block__box--ds--50','Dark Shade 50%','#1F2041')
+      +color-block-ui('color-block__box--ds--25','Dark Shade 25%','#1F2041')
+      +color-block-ui('color-block__box--ds--5','Dark Shade 5%','#1F2041')
       +color-block-ui('color-block__box--purple','Purple','#BC9CFF')
       +color-block-ui('color-block__box--green','Green','#6FCF97')
-    section
+    section.layout-color-and-type__type
       +text-block()
         h1.text-block__tag
           | H1

@@ -8,20 +8,24 @@
     -webkit-box-shadow: 0px 10px 20px 0px $darkShade-color-10;
     -moz-box-shadow:    0px 10px 20px 0px $darkShade-color-10;
     box-shadow:         0px 10px 20px 0px $darkShade-color-10;
-    margin-right: 10px;
+    margin-right: 7px;
   }
   &__header{
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
   &__footer{
     display: flex;
+    padding-left: 4px;
+  }
+  &__like-wrap{
+    button{
+      margin-right: 15px;
+    }
   }
   &__user-name,
   &__time-ago{
-    font-size: 14px;
     line-height: 24px;
-    font-family: 'Montserrat';
     display: block;
     color: $darkShade-color-75;
   }
@@ -29,9 +33,7 @@
     font-weight: 700;
   }
   &__text{
-    font-size: 14px;
     line-height: 24px;
-    font-family: 'Montserrat';
     color: $darkShade-color-75;
     margin: 0;
   }

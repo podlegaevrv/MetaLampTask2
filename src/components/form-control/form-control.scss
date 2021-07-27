@@ -3,41 +3,33 @@
   width: 100%;
   margin-bottom: 20px;
   position: relative;
+  font-size: 0;
+  &--large-margin-bottom{
+    margin-bottom: 40px;
+  }
+  &--form-margin{
+    margin-bottom: 30px;
+  }
+  &__label{
+    margin-bottom: 5px;
+    &--label-group{
+      margin-bottom: 16px;
+    }
+  }
   &__ui-status{
     position: absolute;
-    top: -3px;
+    top: 0px;
     right: 0;
-    font-size: 12px;
+    font-size: $fz-h3;
+    line-height: 15px;
     color: $darkShade-color-50;
     text-transform: uppercase;
   }
   &--short{
     width: 266px;
   }
-  &--two-date{
+  &--date-block{
     width: 150px;
-  }
-  &--two-col{
-    display: flex;
-    justify-content: space-between;
-    @include media-tablet(){
-      flex-wrap: wrap;
-    }
-  }
-  &--no-margin{
     margin-bottom: 0;
-  }
-  &--margin-button{
-    margin-bottom: 30px;
-  }
-  &--reg-margin{
-    margin-bottom: 10px;
-  }
-  &__label{
-    display: block;
-    margin-bottom: 5px;
-    &--ui-margin{
-      margin-bottom: 16px;
-    }
   }
 }

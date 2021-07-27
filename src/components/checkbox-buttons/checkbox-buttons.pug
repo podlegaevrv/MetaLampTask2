@@ -1,9 +1,17 @@
-mixin checkbox-button(name,text,check,rich_title)
-    label(class="custom-checkbox")
-        input(type="checkbox" name= name class="custom-checkbox__input", checked=check)
-        span(class="custom-checkbox__indicator")
-        if(rich_title != '' && rich_title != undefined)
-          span(class="custom-checkbox__rich-title")=rich_title
-          span(class="custom-checkbox__sub-text")=text
-        else
-            span(class="custom-checkbox__text")=text
+mixin checkbox-button(options)
+  -
+    defaultoptions = {
+      name: 'change-name',
+      text: 'change-text',
+      rich_title: '',
+      check: false
+    }
+    options = Object.assign({}, defaultoptions, options)
+  label.custom-checkbox(class!=attributes.class)
+    input(type="checkbox" name=options.name class="custom-checkbox__input", checked=options.check)
+    span(class="custom-checkbox__indicator")
+    if(options.rich_title !== '')
+      span(class="custom-checkbox__rich-title")=options.rich_title
+      span(class="custom-checkbox__sub-text")=options.text
+    else
+      span(class="custom-checkbox__text")=options.text

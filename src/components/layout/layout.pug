@@ -2,15 +2,15 @@ include ../page-header/page-header
 include ../page-footer/page-footer
 
 mixin layout-color-and-type()
-    main.layout-color-and-type
-        block
+  main.layout-color-and-type
+    block
 
 mixin layout-form-elements()
-    main.layout-form-elements(class!=attributes.class)
-        block
+  section.layout-form-elements(class!=attributes.class)
+    block
 
 mixin layout-main-wrap()
-    body.layout-main-wrap
-        +page-header()
-        block
-        +page-footer
+  body.layout-main-wrap
+    +page-header()
+    block
+    +page-footer

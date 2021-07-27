@@ -1,0 +1,41 @@
+.chart-legends{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 30px;
+  align-self: flex-end;
+  position: relative;
+  &__item{
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    &::before{
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: red;
+      margin-right: 5px;
+    }
+    &--yelow{
+      &::before{
+        background: linear-gradient(to bottom, #FFE39C, #FFBA9C);
+      }
+    }
+    &--blue{
+      &::before{
+        background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
+      }
+    }
+    &--green{
+      &::before{
+        background: linear-gradient(to bottom, #6FCF97, #66D2EA);
+      }
+    }
+    &--dark{
+      &::before{
+        background: linear-gradient(to bottom, #909090, #3D4975);
+      }
+    }
+  }
+}

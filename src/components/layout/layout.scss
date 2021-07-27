@@ -3,15 +3,20 @@
   display: grid;
   grid-template-columns: 1fr 444px;
   margin: 0 auto;
+  &__color{}
+  &__type{}
 }
 .layout-form-elements{
   max-width: 1159px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
-  margin-bottom: 100px;
-  &--ui-margin{
-    margin-bottom: 134px;
+  margin: 0 auto 80px;
+  &--ui-row-2{
+    margin-bottom: 138px;
+  }
+  &--ui-row-3{
+    margin-bottom: 8px;
+    align-items: baseline;
   }
   &__left-col{
     width: 320px;
@@ -30,7 +35,8 @@
     width: 320px;
   }
   &__rigt-col-type2{
-    width: 705px;
+    width: 711px;
+    padding-top: 10px;
     margin-left: 126px;
   }
 }

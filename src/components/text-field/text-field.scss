@@ -10,18 +10,22 @@
   width: 100%;
   box-sizing: border-box;
   outline: none;
-  font-size: 14px;
-  font-family: 'Montserrat';
-
+  font-size: $fz-base;
   &::placeholder{
     color: $darkShade-color-25;
   }
-  &:hover,&:focus,&:active,:focus-visible{
+  &:hover,
+  &:focus,
+  &:active,
+  :focus-visible{
     border: 1px solid $darkShade-color-50;
     color: $darkShade-color-75;
   }
   &--sub{
     padding-right: 50px;
+  }
+  &--form-margin{
+    margin-bottom: 10px;
   }
 }
 .text-submit{

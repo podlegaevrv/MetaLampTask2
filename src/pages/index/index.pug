@@ -1,26 +1,35 @@
 extends ../base/base
 
+include ../../components/card-block/card-block
+include ../../components/buttons/buttons
+
 block variables
 
 block title
-    | UI KIT
+  | UI KIT
 
 block main
-    a(href='colorandtype.html') Color&Type
-    br
-    a(href='formelements.html') Form Elements
-    br
-    a(href='cards.html') Cards
-    br
-    a(href='headersandfooters.html') Headers & Footers
-    br
-    br
-    a(href='landing-page.html') Landing page
-    br
-    a(href='search-room.html') Search room
-    br
-    a(href='room-details.html') Room details
-    br
-    a(href='registration.html') Registration
-    br
-    a(href='sign-in.html') Sign in
+  main.main-index
+    +card-block()
+      h2 UI kit
+      ul.main-index__nav
+        li.main-index__nav-item
+          +linkType3('Color&Type','colorandtype.html')
+        li.main-index__nav-item
+          +linkType3('Form Elements','formelements.html')
+        li.main-index__nav-item
+          +linkType3('Cards','cards.html')
+        li.main-index__nav-item
+          +linkType3('Headers & Footers','headersandfooters.html')
+      h2 Website pages
+      ul.main-index__nav
+        li.main-index__nav-item
+          +linkType3('Landing page','landing-page.html')
+        li.main-index__nav-item
+          +linkType3('Search room','search-room.html')
+        li.main-index__nav-item
+          +linkType3('Room details','room-details.html')
+        li.main-index__nav-item
+          +linkType3('Registration','registration.html')
+        li.main-index__nav-item
+          +linkType3('Sign in','sign-in.html')

@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development'
@@ -18,23 +19,9 @@ fs.readdirSync(path.resolve(__dirname, 'src', 'pages')).filter((file) => {
 });
 
 
-const optimization = () =>{
-  const config = {}
-
-  if (isProd) {
-    config.minimizer = [
-      new OptimizeCssAssetsPlugin()
-    ]
-  }
-
-  return config
-}
-
-
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  cache: true,
   entry: {
     main: './index.js'
   },
@@ -43,28 +30,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: '[path][name].[ext]'
   },
-  optimization: optimization(),
-  devServer: {
-    port: 4200,
-    open: isDev,
-    host: '192.168.0.37',
-    hot: true
-  },
-  plugins: [
-    new CleanWebpackPlugin(),
-    ...pages.map(fileName => new HtmlWebpackPlugin({
-      filename: `${fileName}.html`,
-      template: `./pages/${fileName}/${fileName}.pug`,
-      inject: 'body'
-    })),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css'
-    })
-  ],
   module: {
     rules: [
       {
@@ -90,7 +55,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
           },
           {
             loader: "sass-loader"
@@ -109,5 +74,27 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  devServer: {
+    port: 4200,
+    open: isDev,
+
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    ...pages.map(fileName => new HtmlWebpackPlugin({
+      filename: `${fileName}.html`,
+      template: `./pages/${fileName}/${fileName}.pug`,
+      inject: 'body'
+    })),
+    new FaviconsWebpackPlugin('theme/favicon.svg'),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css'
+    })
+  ],
+
 }

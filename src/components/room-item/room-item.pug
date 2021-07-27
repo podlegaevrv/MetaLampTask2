@@ -1,25 +1,22 @@
 include ../rate-button/rate-button
 
 mixin room-item(options)
-    if !options
-      -options = {}
-    article.room-item(class!=attributes.class)
-        .room-item__slider
-            each item in options.slider
-                .room-item__slider-itemnm
-                    img(src=require('../../components/room-item/img/' + item))
-
-        .room-item__body
-            .room-item__body-header
-                .room-item__number-room
-                    span № 
-                        span.text-h1= options.number
-                        span.text-h3.room-item__type-room= options.type
-                .room-item__price-day
-                    span= options.price
-                        span.room-item__price-day--day в сутки
-            .room-item__body-footer
-                +rate-button('simple-rate' + options.id, options.rate)
-                span.room-item__count-rev= options.rev  
-                    span.room-item__count-rev--light Отзывов
-
+  if !options
+    -options = {}
+  article.room-item(class!=attributes.class)
+    .room-item__slider
+      each item in options.slider
+        .room-item__slider-itemnm
+          img(src=require('../../components/room-item/img/' + item))
+    .room-item__body
+      .room-item__body-header
+        .room-item__number-room № 
+          span.room-item__number= options.number
+          span.text-h3.room-item__type-room= options.type
+        .room-item__price-day
+          span= options.price
+            span.room-item__price-day--day в сутки
+      .room-item__body-footer
+        +rate-button('simple-rate' + options.id, options.rate)
+        span.room-item__count-rev= options.rev
+          span.room-item__count-rev--light Отзывов

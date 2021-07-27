@@ -3,25 +3,30 @@
 .icon-text-block{
   display: flex;
   max-width: 280px;
-  padding-bottom: 17px;
+  padding-bottom: 20px;
   border-bottom: 1px solid $darkShade-color-10;
   margin-bottom: 20px;
   &--no-border{
     border-bottom: none;
+    margin-bottom: 0;
+  }
+  &__img-wrap{
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__img{
-    margin-right: 10px;
   }
   &__title,
   &__text{
-    font-size: 14px;
     line-height: 24px;
-    font-family: 'Montserrat';
     display: block;
     color: $darkShade-color-75;
   }
   &__title{
     font-weight: 700;
   }
-
 }

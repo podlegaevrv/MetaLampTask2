@@ -59,7 +59,7 @@
 
       function addClearBtn($menu){
         const { onChange } = settings;
-        const $btnClear = $(`<button type="button" class="btn-type3 clear" >Очистить</button>`);
+        const $btnClear = $(`<button type="button" class="button-type-3 clear" >Очистить</button>`);
 
         $menu.append($btnClear);
 
@@ -83,7 +83,7 @@
       };
 
       function addApplyBtn($menu){
-        const $btnApply = $(`<button type="button" class="btn-type3 apply">Применить</button>`);
+        const $btnApply = $(`<button type="button" class="button-type-3 apply">Применить</button>`);
         $menu.append($btnApply);
 
         $btnApply.click((event) => {

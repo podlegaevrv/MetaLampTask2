@@ -24,8 +24,8 @@ input.date-dropdown{
 .datepicker {
   width: 320px;
   color: $darkShade-color-50;
-  font-size: 12px;
-  font-family: 'Montserrat';
+  font-size: $fz-h3;
+  font-family: 'Montserrat', sans-serif;
   border-color: $darkShade-color-25;
   -webkit-box-shadow: 0px 10px 20px 0px $darkShade-color-5;
   -moz-box-shadow: 0px 10px 20px 0px $darkShade-color-5;
@@ -35,15 +35,13 @@ input.date-dropdown{
   }
 }
 .datepicker--content {
-  padding: 20px;
-  padding-bottom: 0;
+  padding: 20px 20px 0;
   @include media-mobile{
-    padding: 15px;
-    padding-bottom: 0;
+    padding: 15px 15px 0;
   }
 }
 .datepicker--days-names {
-
+  margin-bottom: 13px;
 }
 .datepicker--pointer{
   display: none;
@@ -52,22 +50,18 @@ input.date-dropdown{
 .datepicker--day-name {
   color: $purple-color;
   text-transform: none;
-  font-size: 12px;
+  font-size: $fz-h3;
   font-weight: 700;
-  font-family: 'Montserrat';
 }
 
 .datepicker--nav {
   border: none;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 15px 17px 10px 16px;
 }
 .datepicker--nav-title{
-  font-size: 19px;
+  font-size: $fz-h2;
   color: $base-darkShade-color;
   font-weight: 700;
-  font-family: 'Montserrat';
 }
 .datepicker--nav-action {
   &:hover{
@@ -77,7 +71,6 @@ input.date-dropdown{
     width: 17px;
     height: 18px;
   }
-
   path {
     fill: $purple-color;
     stroke: none
@@ -90,14 +83,14 @@ input.date-dropdown{
   &.-current- {
     color: white;
     font-weight: 700;
-    background: linear-gradient(180deg, rgba(111,207,151,1) 0%, rgba(102,210,234,1) 100%);
+    background: $green-linear-gradient;
     &.-focus- {
       color: white;
     }
   }
   &.-range-from- {
     border: none;
-    background: linear-gradient(180deg, rgba(188,156,255,1) 0%, rgba(139,164,249,1) 100%);
+    background: $purple-linear-gradient;
     border-radius: 100%;
     position: relative;
     &::after{
@@ -114,7 +107,7 @@ input.date-dropdown{
   }
   &.-range-to- {
     border: none;
-    background: linear-gradient(180deg, rgba(188,156,255,1) 0%, rgba(139,164,249,1) 100%);
+    background: $purple-linear-gradient;
     border-radius: 100%;
     position: relative;
     &::before{
@@ -130,9 +123,9 @@ input.date-dropdown{
     }
   }
   &.-selected- {
-    background: linear-gradient(180deg, rgba(188,156,255,1) 0%, rgba(139,164,249,1) 100%);
+    background: $purple-linear-gradient;
     &.-focus- {
-      background: linear-gradient(180deg, rgba(188,156,255,1) 0%, rgba(139,164,249,1) 100%);
+      background: $purple-linear-gradient;
     }
   }
   &.-in-range- {
@@ -162,4 +155,9 @@ input.date-dropdown{
 }
 .date-dropdown-inline{
   margin-bottom: 40px;
+}
+.date-dropdown-separate{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

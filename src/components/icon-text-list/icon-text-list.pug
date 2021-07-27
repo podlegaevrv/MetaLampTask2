@@ -1,20 +1,10 @@
-mixin text-icon-comfort()
-    .icon-text-block
-        img.icon-text-block__img(src=require('../../components/icon-text-list/img/insert_emoticon.svg'))
-        div
-            span.icon-text-block__title Комфорт
-            span.icon-text-block__text Шумопоглощающие стены
+mixin text-icon-block(options)
+  if !options
+    -options = {}
+  .icon-text-block(class!=attributes.class)
+    div.icon-text-block__img-wrap
+      img.icon-text-block__img(src=require('../../components/icon-text-list/img/' + options.img))
+    div.icon-text-block__text-wrap
+      span.icon-text-block__title=options.title
+      span.icon-text-block__text=options.text
 
-mixin text-icon-tower()
-    .icon-text-block
-        img.icon-text-block__img(src=require('../../components/icon-text-list/img/location_city.svg'))
-        div
-            span.icon-text-block__title Удобство
-            span.icon-text-block__text Окно в каждой из спален
-
-mixin text-icon-cosiness()
-    .icon-text-block.icon-text-block--no-border
-        img.icon-text-block__img(src=require('../../components/icon-text-list/img/whatshot.svg'))
-        div
-            span.icon-text-block__title Уют
-            span.icon-text-block__text Номер оснащён камином

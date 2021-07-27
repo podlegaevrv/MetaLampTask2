@@ -1,5 +1,6 @@
 extends ../base/base
 
+include ../../components/uikitHeader/uikitHeader
 include ../../components/layout/layout
 include ../../components/find-rooms/find-rooms
 include ../../components/account-registration/account-registration
@@ -11,45 +12,45 @@ include ../../components/room-item/room-item
 block variables
 
 block title
-    | Cards
+  | Cards
 
 block main
-    body.layout-cards-ui-bg
-        include ../../components/uikitHeader/uikitHeader
-        section.layout-cards-ui
-            section
-               +find-rooms()
-               +account_registration()
-            section
-                +total-card()
-                +sign-in-card()
-            section
-                +date-dropdown-inline()
-                +room-item({
-                  id: '1',
-                  number: '888',
-                  type: 'Люкс',
-                  price: '9 990₽ ',
-                  rev: '145 ',
-                  rate: '5',
-                  slider: [
-                    '1.jpg',
-                    '1.jpg',
-                    '1.jpg',
-                    '1.jpg'
-                  ]
-                })(class='room-item--ui-kit')
-                +room-item({
-                  id: '2',
-                  number: '840',
-                  type: '',
-                  price: '9 900₽ ',
-                  rev: '65 ',
-                  rate: '4',
-                  slider: [
-                    '2.jpg',
-                    '2.jpg',
-                    '2.jpg',
-                    '2.jpg'
-                  ]
-                })
+  body.layout-cards-ui-bg
+    +uikitHeader()
+    main.layout-cards-ui
+      section.layout-cards-ui__col-1
+        +find-rooms()
+        +account_registration()
+      section.layout-cards-ui__col-2
+        +total-card()
+        +sign-in-card()
+      section.layout-cards-ui__col-3
+        +date-dropdown-inline()
+        +room-item({
+          id: '1',
+          number: '888',
+          type: 'Люкс',
+          price: '9 990₽ ',
+          rev: '145 ',
+          rate: '5',
+          slider: [
+            '1.jpg',
+            '1.jpg',
+            '1.jpg',
+            '1.jpg'
+          ]
+        })(class='room-item--ui-kit')
+        +room-item({
+          id: '2',
+          number: '840',
+          type: '',
+          price: '9 900₽ ',
+          rev: '65 ',
+          rate: '4',
+          slider: [
+            '2.jpg',
+            '2.jpg',
+            '2.jpg',
+            '2.jpg'
+          ]
+        })

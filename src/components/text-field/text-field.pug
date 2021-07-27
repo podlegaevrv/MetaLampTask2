@@ -1,6 +1,16 @@
-mixin text-field(placeholder, value)
-    input.text-field(placeholder=placeholder, value=value ,type='text', class!=attributes.class, id!=attributes.id)
+mixin text-field(options)
+  -
+    defaultoptions ={
+      name: 'change-name',
+      type: 'text',
+      value: '',
+      placeholder: ''
+    }
+    options = Object.assign({}, defaultoptions, options)
+
+  input.text-field(name=options.name placeholder=options.placeholder, value=options.value ,type=options.type, class!=attributes.class, id!=attributes.id)
 
 mixin text-field-subscribe(placeholder, value)
-    input.text-field.text-field--sub(placeholder=placeholder, value=value ,type='text', class!=attributes.class, id!=attributes.id)
-    input.text-submit(type='submit' value='')
+  input.text-field.text-field--sub(placeholder=placeholder, value=value ,type='email', class!=attributes.class, id!=
+  attributes.id)
+  input.text-submit(type='submit')
